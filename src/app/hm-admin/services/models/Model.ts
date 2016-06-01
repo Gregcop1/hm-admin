@@ -12,7 +12,7 @@ export class Model {
         if (datas) {
             this.title = datas[definition.title] || '';
             this.description = datas[definition.description] || '';
-            this.properties = undefined !== datas[definition.supportedProperty] ? this.getProperties(datas[definition.supportedProperty], definition) : [];
+            this.properties = undefined !== datas.supportedProperty ? this.getProperties(datas.supportedProperty, definition) : [];
             this.link = datas.link || ['/List', {model: this.title}];
         }
     }

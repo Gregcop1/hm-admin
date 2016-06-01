@@ -25,7 +25,7 @@ export let schemaHelper = {
    * @private
    */
     populateModels(datas: any, definition: any): Array<Model> {
-    return _.map(schemaHelper.cleanModelsList(datas[definition.supportedClass]),  (item) => {
+    return _.map(schemaHelper.cleanModelsList(datas.supportedClass),  (item) => {
      return schemaHelper.populateModel(item, definition);
     });
   },
